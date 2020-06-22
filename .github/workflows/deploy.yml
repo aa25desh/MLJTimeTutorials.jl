@@ -1,6 +1,8 @@
 name: Build and Deploy
 on:
   push:
+    branches:
+      - dev
     # NOTE:
     #   For a **project** site (username.github.io/project/), push things
     #     to the **master** branch and make sure to set the line below to
@@ -60,5 +62,5 @@ jobs:
         # NOTE
         #   Set this to `BRANCH: gh-pages` for a **project** page and  to
         #   `BRANCH: master` for a **personal** page
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: __site
