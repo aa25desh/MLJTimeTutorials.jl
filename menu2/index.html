@@ -5,7 +5,5 @@ X_test, y_test = X_y_split(test)
 forest = RandomForestClassifierTS(X_train, y_train)
 <span class=hljs-meta >@show</span> y_predict = predict_new(X_test, forest)
 <span class=hljs-meta >@show</span> y_test
-<span class=hljs-meta >@show</span> L1(y_predict, y_test)</code></pre> <pre><code class="plaintext hljs">ArgumentError: Package MLJTime not found in current path:
-- Run `import Pkg; Pkg.add(&quot;MLJTime&quot;)` to install the MLJTime package.
-
+<span class=hljs-meta >@show</span> L1(y_predict, y_test)</code></pre> <pre><code class="plaintext hljs">UndefVarError: load_gunpoint not defined
 </code></pre> <div class=page-foot > <div class=copyright > &copy; Aadesh Deshmukh. Last modified: August 31, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>. </div> </div> </div> </div> </div> <script src="/MLJTimeTutorials.jl/libs/pure/ui.min.js"></script>
