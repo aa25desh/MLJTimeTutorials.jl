@@ -42,7 +42,7 @@ jobs:
     # specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
             using Pkg; Pkg.add(["NodeJS", "Franklin"]);
-            Pkg.add(url="https://github.com/alan-turing-institute/MLJTime.jl.git");
+            Pkg.add("https://github.com/alan-turing-institute/MLJTime.jl.git");
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
             Pkg.activate("."); Pkg.instantiate();
