@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Franklin Template</title>
+  <title>MLJTime</title>
   <description><![CDATA[Example website using Franklin
 ]]></description>
   <link>https://tlienart.github.io/FranklinTemplates.jl/</link>
