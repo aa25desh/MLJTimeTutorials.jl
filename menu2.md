@@ -14,13 +14,19 @@
 
 ```julia:./univariat.jl
 using MLJTime
-train, test = load_gunpoint()
-X_train, y_train = X_y_split(train)
-X_test, y_test = X_y_split(test)
-forest = RandomForestClassifierTS(X_train, y_train)
-@show y_predict = predict_new(X_test, forest)
-@show y_test
-@show L1(y_predict, y_test)
+
+X, y = ts_dataset("Chinatown")
+unique(y)
+
+train, test = partition(eachindex(y), 0.7, shuffle=true, rng=1234) #70:30 split
+X_train, y_train = X[train], y[train];
+X_test, y_test = X[test], y[test];
+
+model = TimeSeriesForestClassifier(n_trees=3)
+mach = machine(model, X_train, y_train)
+fit!(mach)
+
+y_pred = predict(mach, X_test)
 ```
 
 \output{./univariat.jl}
